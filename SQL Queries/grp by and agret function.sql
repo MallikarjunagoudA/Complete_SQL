@@ -39,3 +39,6 @@ select frdName,Count(frdName) as sameNameOfFriends from friends group by frdName
 
 
 
+
+
+

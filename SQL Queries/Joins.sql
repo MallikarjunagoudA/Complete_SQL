@@ -75,9 +75,42 @@ select * from teachers a right join teachersdetails b on a.teacherid=b.id
 select * from teachers a right outer join teachersdetails b on a.teacherid=b.id
  
 
+
+
  --outer join or full outer join
  select * from teachers a full join teachersdetails b on a.teacherid=b.id
 
 select * from teachers a full outer join teachersdetails b on a.teacherid=b.id
 
 --
+ --cross join or cartestin join ---it will not support the on clause
+ select * from teachers  cross join teachersdetails 
+
+  select * from teachersdetails  cross join teachers 
+
+
+
+  --advanced or intelligent joins
+  
+--lfet join or left outer join ---to get only left values which are not matched
+select * from teachers a left join teachersdetails b on a.teacherid=b.id where a.teacherid is null
+
+select * from teachers a left outer join teachersdetails b on a.teacherid=b.id where b.id is null
+
+--right join or right outer join --to get the only right values which are not matched
+
+select * from teachers a right join teachersdetails b on a.teacherid=b.id  where a.teacherid is null
+
+select * from teachers a right outer join teachersdetails b on a.teacherid=b.id  where b.id is null
+ 
+
+
+ --outer join or full outer join
+ select * from teachers a full join teachersdetails b on a.teacherid=b.id where b.id is null  and a.teacherid is null
+
+select * from teachers a full outer join teachersdetails b on a.teacherid=b.id  where b.id is null  and a.teacherid is null
+
+
+--self join
+
+select * from teachers a full outer join teachers b on a.teacherid=b.id
