@@ -16,5 +16,12 @@ select * from  office1dbpractice.dbo.getEmpDetails()
 drop  function .dbo.getEmpDetails
 
 
---the table returned by table valued function can be also be used in joins with other tables.
+--update
 
+update dbo.getEmpDetails() set name='hanamanth' where name='sujit' 
+
+
+select * from emp
+
+--the table returned by table valued function can be also be used in joins with other tables.
+--we can do update using this inline function too.
