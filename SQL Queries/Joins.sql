@@ -113,4 +113,4 @@ select * from teachers a full outer join teachersdetails b on a.teacherid=b.id  
 
 --self join
 
-select * from teachers a full outer join teachers b on a.teacherid=b.id
+select * from teachers a full outer join teachers b on a.teacherid=b.id 
